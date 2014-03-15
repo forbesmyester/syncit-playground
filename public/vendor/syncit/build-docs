@@ -1,0 +1,18 @@
+#!/bin/sh
+docker -i js  -o docs/
+if [ ! -d README/img ]; then
+	mkdir -p README/img
+fi
+mkdir -p bin/README/img
+cat README.no-conflict-feed.dot | dot -Gdpi=64 -Tpng:cairo:cairo > bin/README/img/no-conflict-feed.png
+cat README.overall-diagram.dot | dot -Gdpi=64 -Tpng:cairo:cairo > bin/README/img/overall-diagram.png
+cat README.read-request.dot | dot -Gdpi=64 -Tpng:cairo:cairo > bin/README/img/read-request.png
+cat README.download_updates_from_server.dot | dot -Gdpi=64 -Tpng:cairo:cairo > bin/README/img/download_updates_from_server.png
+cat README.feed_into_syncit.dot | dot -Gdpi=64 -Tpng:cairo:cairo > bin/README/img/feed_into_syncit.png
+cat README.work_locally_get.dot| dot -Gdpi=64 -Tpng:cairo:cairo > bin/README/img/work_locally_get.png
+cat README.work_locally_set.dot| dot -Gdpi=64 -Tpng:cairo:cairo > bin/README/img/work_locally_set.png
+cat README.getfirst.dot | dot -Gdpi=64 -Tpng:cairo:cairo > bin/README/img/getfirst.png
+cat README.getfirst_and_advance.dot | dot -Gdpi=64 -Tpng:cairo:cairo > bin/README/img/getfirst_and_advance.png
+dia -e bin/README/img/process.png -O /tmp README.process.dia
+marked -i README.md -o README.html
+refresh_chromium.sh

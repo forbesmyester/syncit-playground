@@ -1,0 +1,29 @@
+{
+  "name": "getTLIdEncoderDecoder",
+  "main": "index.js",
+  "version": "0.9.0",
+  "authors": [
+    "Matthew Forrester <matt@keyboardwritescode.com>"
+  ],
+  "description": "Locally unique, shorter, sortable timestamp based Id's",
+  "keywords": [
+    "Date",
+    "Date.getTime()",
+    "getTime()",
+    "guid",
+    "javascript",
+    "sort",
+    "timestamp",
+    "unique",
+    "id"
+  ],
+  "license": "MIT",
+  "homepage": "http://keyboardwritescode.blogspot.co.uk/2013/06/gettlidencoderdecoderjs-locally-unique.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

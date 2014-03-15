@@ -1,0 +1,13 @@
+digraph a { 
+	subgraph x {
+		color = gray;
+		Server -> App [arrowhead=none, style=dashed]; 
+		App -> SyncIt [arrowhead=none, style=dashed]; 
+	}
+	subgraph clustersi {
+		label = "SyncIt Library";
+		color = black;
+		SyncIt -> SyncIt_Queue [arrowhead=none]; 
+		SyncIt -> SyncIt_Store [arrowhead=none]; 
+	}
+} 
